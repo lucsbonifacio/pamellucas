@@ -1,0 +1,52 @@
+.gift {
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-dark);
+    border-radius: 4px;
+    color: var(--color-dark);
+    box-sizing: border-box;
+    display: block;
+    max-width: 280px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 16px;
+    text-decoration: none;
+    transition: all 304ms;
+}
+
+.gift:hover {
+    transform: scale(1.04);
+}
+
+.gift .icon,
+.gift .price,
+.gift .aprox-price {
+    display: block;
+}
+
+.gift .icon {
+    font-size: 72px;
+    padding-bottom: 8px;
+}
+
+.gift h3 {
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 300;
+    padding-bottom: 16px;
+}
+
+.gift .price {
+    font-size: 20px;
+    padding-bottom: 8px;
+}
+
+.gift .aprox-price {
+    font-size: 14px;
+}
+
+@media (min-width: 1024px) {
+    .gift {
+        max-width: 200px;
+    }
+}

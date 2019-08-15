@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import Gift from '../components/gift';
 import Menu from '../components/menu';
 import Modal from '../components/modal';
 import './home.css';
@@ -11,6 +12,58 @@ export default class Home extends Component {
         this.state = {
             showModal: false
         }
+
+        this.gifts = [
+            {
+                icon: '👖',
+                title: 'Secagem semanal de roupas',
+                priceInReal: 25,
+                priceInEuro: 5,
+                url: 'http://google.com.br'
+            },
+            {
+                icon: '🍦',
+                title: 'Sorvete na margem do rio Sena',
+                priceInReal: 50,
+                priceInEuro: 10,
+                url: 'http://google.com.br'
+            },
+            {
+                icon: '🛴',
+                title: 'Passeio de patinete pela cidade',
+                priceInReal: 100,
+                priceInEuro: 20,
+                url: 'http://google.com.br'
+            },
+            {
+                icon: '🧺',
+                title: 'Piquenique no jardim de Versailles',
+                priceInReal: 150,
+                priceInEuro: 30,
+                url: 'http://google.com.br'
+            },
+            {
+                icon: '🛒',
+                title: 'Compras da semana no "supermarché"',
+                priceInReal: 250,
+                priceInEuro: 50,
+                url: 'http://google.com.br'
+            },
+            {
+                icon: '🍽',
+                title: 'Jantar no topo da Torre Eiffel',
+                priceInReal: 500,
+                priceInEuro: 100,
+                url: 'http://google.com.br'
+            }
+        ]
+    }
+
+    renderGifts() {
+        return this.gifts.map(gift => {
+            const { icon, title, priceInReal, priceInEuro, url } = gift;
+            return (<Gift key={title} icon={icon} title={title} priceInReal={priceInReal} priceInEuro={priceInEuro} url={url} />);
+        });
     }
 
     render() {
@@ -40,9 +93,13 @@ export default class Home extends Component {
                     </article>
                 </section>
                 <Modal show={this.state.showModal} onClose={() => this.setState({ showModal: !this.state.showModal })}>
-                    <div class="modal__content">
+                    <div className="modal__content">
                         <h1>Envie um presente</h1>
                         <p>Os itens são ilustrativos e essas quantias são algumas sugestões. Se quiser contribuir com algum outro valor que não esteja abaixo, entre em contato conosco.</p>
+
+                        <div className="gift__list">
+                            { this.renderGifts() }
+                        </div>
                     </div>
                 </Modal>
             </main>            

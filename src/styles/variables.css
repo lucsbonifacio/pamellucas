@@ -2,4 +2,6 @@
     --color-primary: #FFEF78;
     --color-dark: #000000;
     --color-light: #FFFFFF;
+    --font-family-primary: "Helvetica Neue", "sans-serif";
+    --font-family-secondary: "Playfair Display SC", "serif";
 }

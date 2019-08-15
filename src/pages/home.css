@@ -113,6 +113,18 @@
     padding-bottom: 24px;
 }
 
+.gift__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 48px;
+}
+
+.gift__list .gift {
+    margin-bottom: 48px;
+}
+
+
 @media (min-width: 1024px) {
     .home {
         flex-direction: row;
@@ -137,4 +149,16 @@
         padding-top: 64px;
         width: 30%;
     }
+
+    .gift__list .gift {
+        margin-bottom: 24px;
+    }    
+
+    .gift__list .gift:nth-child(odd) {
+        margin-right: 12px;
+    }
+    
+    .gift__list .gift:nth-child(even) {
+        margin-left: 12px;
+    }    
 }
