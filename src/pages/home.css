@@ -150,15 +150,17 @@
         width: 30%;
     }
 
+    .information {
+        padding-top: 48px;
+    }
+
+    .information:after {
+        margin-top: 48px;
+    }
+
     .gift__list .gift {
         margin-bottom: 24px;
-    }    
-
-    .gift__list .gift:nth-child(odd) {
-        margin-right: 12px;
-    }
-    
-    .gift__list .gift:nth-child(even) {
         margin-left: 12px;
+        margin-right: 12px;
     }    
 }

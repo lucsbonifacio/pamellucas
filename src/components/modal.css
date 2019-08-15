@@ -3,7 +3,6 @@
     box-sizing: border-box;
     height: 100vh;
     left: 0;
-    overflow: scroll;
     padding-bottom: 16px;
     padding-left: 16px;
     padding-right: 16px;
@@ -21,9 +20,25 @@
     display: block;
 }
 
-.modal .modal__container {
-    margin-top: 24px;
-    padding-top: 32px;
+.modal .modal__header {
+    background-color: var(--color-primary);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    left: 0;
+    top: 0;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 16px;
+    position: absolute;
+    width: 100%;
+}
+
+.modal .modal__content {
+    height: calc(100vh - 56px);
+    margin-top: 60px;
+    overflow: scroll;
 }
 
 .button--close {
@@ -32,9 +47,6 @@
     cursor: pointer;
     padding-left: 0;
     padding-right: 0;
-    position: absolute;
-    right: 16px;
-    top: 16px;
 }
 
 .button--close,
@@ -53,20 +65,15 @@
 @media (min-width: 1024px) {
     .modal {
         left: auto;
-        padding-bottom: 32px;
-        padding-left: 32px;
-        padding-right: 32px;
-        padding-top: 32px;
+        padding-bottom: 24px;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 24px;
         right: 0;
         width: 30%;
     }
 
-    .button--close {
-        right: 64px;
-        top: 64px;
-    }
-
-    .modal .modal__container {
-        padding-top: 48px;
+    .modal .modal__content {
+        margin-top: 28px;
     }
 }

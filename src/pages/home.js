@@ -15,22 +15,22 @@ export default class Home extends Component {
 
         this.gifts = [
             {
-                icon: '👖',
-                title: 'Secagem semanal de roupas',
+                icon: '🥐',
+                title: 'Croissants na boulangerie da esquina',
                 priceInReal: 25,
                 priceInEuro: 5,
                 url: 'http://google.com.br'
             },
             {
-                icon: '🍦',
-                title: 'Sorvete na margem do rio Sena',
+                icon: '🛴',
+                title: 'Passeio de patinete pela cidade',
                 priceInReal: 50,
                 priceInEuro: 10,
                 url: 'http://google.com.br'
             },
             {
-                icon: '🛴',
-                title: 'Passeio de patinete pela cidade',
+                icon: '📚',
+                title: 'Material para as aulas de francês',
                 priceInReal: 100,
                 priceInEuro: 20,
                 url: 'http://google.com.br'

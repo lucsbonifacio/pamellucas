@@ -5,13 +5,13 @@
     color: var(--color-dark);
     box-sizing: border-box;
     display: block;
-    max-width: 280px;
     padding-bottom: 16px;
     padding-left: 16px;
     padding-right: 16px;
     padding-top: 16px;
     text-decoration: none;
     transition: all 304ms;
+    width: 280px;
 }
 
 .gift:hover {
@@ -47,6 +47,6 @@
 
 @media (min-width: 1024px) {
     .gift {
-        max-width: 200px;
+        width: 200px;
     }
 }
