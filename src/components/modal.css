@@ -1,0 +1,72 @@
+.modal {
+    background-color: var(--color-primary);
+    box-sizing: border-box;
+    height: 100vh;
+    left: 0;
+    overflow: scroll;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 16px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.modal.is--hidden {
+    display: none;
+}
+
+.modal--is-visible {
+    display: block;
+}
+
+.modal .modal__container {
+    margin-top: 24px;
+    padding-top: 32px;
+}
+
+.button--close {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    padding-left: 0;
+    padding-right: 0;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+}
+
+.button--close,
+.button-close:active,
+.button--close:hover,
+.button--close:focus {
+    outline: none;
+}
+
+.button--close svg {
+    height: 24px;
+    fill: var(--color-dark);
+    width: 24px;
+}
+
+@media (min-width: 1024px) {
+    .modal {
+        left: auto;
+        padding-bottom: 64px;
+        padding-left: 64px;
+        padding-right: 64px;
+        padding-top: 64px;
+        right: 0;
+        width: 30%;
+    }
+
+    .button--close {
+        right: 64px;
+        top: 64px;
+    }
+
+    .modal .modal__container {
+        padding-top: 48px;
+    }
+}
