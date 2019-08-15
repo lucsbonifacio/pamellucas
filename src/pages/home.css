@@ -1,0 +1,92 @@
+@import "../styles/variables.css";
+
+.home {
+    display: flex;
+    flex-direction: column;
+}
+
+.picture,
+.sidebar {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.picture {
+    align-items: center;
+    background-blend-mode: multiply;
+    background-color: var(--color-primary);
+    background-image: url(https://ucarecdn.com/62d49504-9de0-4a02-b7d8-a2be71a26599/-/progressive/yes/-/quality/lightest/pamellucas.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100vh;
+    padding-bottom: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 32px;
+}
+
+.button {
+    border: 0;
+    border-radius: 24px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    outline: none;
+    padding-bottom: 12px;
+    padding-left: 56px;
+    padding-right: 56px;
+    padding-top: 12px;
+    text-transform: uppercase;
+    width: fit-content;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+    outline: none;
+}
+
+.button.button--primary {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+.sidebar {
+    background-color: var(--color-primary);
+    padding-bottom: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 32px;
+}
+
+@media (min-width: 1024px) {
+    .home {
+        flex-direction: row;
+    }
+
+    .picture {
+        background-size: cover;
+        width: 70%;
+    }
+
+    .picture .menu,
+    .picture .button {
+        display: none;
+    }
+
+    .sidebar {
+        height: 100vh;
+        overflow: scroll;
+        padding-bottom: 64px;
+        padding-left: 64px;
+        padding-right: 64px;
+        padding-top: 64px;
+        width: 30%;
+    }
+}
