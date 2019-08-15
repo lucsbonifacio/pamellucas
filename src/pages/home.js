@@ -59,6 +59,10 @@ export default class Home extends Component {
         ]
     }
 
+    openLink(link, target) {
+        window.open(link, target);
+    }
+
     renderGifts() {
         return this.gifts.map(gift => {
             const { icon, title, priceInReal, priceInEuro, url } = gift;
@@ -71,9 +75,9 @@ export default class Home extends Component {
             <main className="home">
                 <section className="picture">
                     <Menu />
-                    <button className="button button--primary" type="button">Detalhes</button>
+                    <button className="button button--primary" type="button" onClick={() => this.openLink('#details', '_self')}>Detalhes</button>
                 </section>
-                <section className="sidebar">
+                <section id="details" className="sidebar">
                     <article className="information">
                         <h2 id="date">06.10.2019</h2>
                         <p>Domingo, 15h</p>
@@ -83,7 +87,7 @@ export default class Home extends Component {
                         <p>Rua Harmonia, 896</p>
                         <p>Vila Madalena</p>
                         <p>São Paulo/SP</p>
-                        <button className="button button--default" type="button">Ver no mapa</button>
+                        <button className="button button--default" type="button" onClick={() => this.openLink('https://goo.gl/maps/4E2ShLMS6jcas1Zf8', '_blank')}>Ver no mapa</button>
                     </article>
                     <article className="information information__gifts">
                         <h2 id="gifts">Envie um presente</h2>

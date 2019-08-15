@@ -1,5 +1,6 @@
 .modal {
     background-color: var(--color-primary);
+    box-shadow: 0 8px 16px rgba(var(--color-dark-rgb), 0.2);
     box-sizing: border-box;
     height: 100vh;
     left: 0;
@@ -9,15 +10,16 @@
     padding-top: 16px;
     position: fixed;
     top: 0;
+    transition: transform 600ms ease-in;
     width: 100%;
 }
 
 .modal.is--hidden {
-    display: none;
+    transform: translateY(110%);
 }
 
 .modal--is-visible {
-    display: block;
+    transform: translateY(0);
 }
 
 .modal .modal__header {
@@ -76,4 +78,12 @@
     .modal .modal__content {
         margin-top: 28px;
     }
+
+    .modal.is--hidden {
+        transform: translateX(110%);
+    }
+    
+    .modal--is-visible {
+        transform: translateX(0);
+    }    
 }
