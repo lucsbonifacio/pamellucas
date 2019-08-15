@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Gift from '../components/gift';
+import Logo from '../components/logo';
 import Menu from '../components/menu';
 import Modal from '../components/modal';
 import './home.css';
@@ -75,6 +76,7 @@ export default class Home extends Component {
             <main className="home">
                 <section className="picture">
                     <Menu />
+                    <Logo />
                     <button className="button button--primary" type="button" onClick={() => this.openLink('#details', '_self')}>Detalhes</button>
                 </section>
                 <section id="details" className="sidebar">
