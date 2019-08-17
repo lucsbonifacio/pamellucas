@@ -25,8 +25,12 @@
 }
 
 .gift .icon {
-    font-size: 72px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 98px;
+    margin: 0 auto;
     padding-bottom: 8px;
+    width: 98px;
 }
 
 .gift h3 {

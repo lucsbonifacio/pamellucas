@@ -16,48 +16,60 @@ export default class Home extends Component {
 
         this.gifts = [
             {
-                icon: '🥐',
+                icon: 'croissant.png',
                 title: 'Croissants na boulangerie da esquina',
                 priceInReal: 25,
                 priceInEuro: 5,
-                url: 'http://google.com.br'
+                url: 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=181978185-40565c7d-9e25-49c6-88e5-9b1f7669407f'
             },
             {
-                icon: '🛴',
+                icon: 'patinete.png',
                 title: 'Passeio de patinete pela cidade',
                 priceInReal: 50,
                 priceInEuro: 10,
-                url: 'http://google.com.br'
+                url: 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=181978185-a02eb801-4f9a-4949-906c-50499d8e3383'
             },
             {
-                icon: '📚',
+                icon: 'livros.png',
                 title: 'Material para as aulas de francês',
                 priceInReal: 100,
                 priceInEuro: 20,
-                url: 'http://google.com.br'
+                url: 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=181978185-8aad55c7-5341-43e8-bce3-50c12f5851f3'
             },
             {
-                icon: '🧺',
+                icon: 'piquenique.png',
                 title: 'Piquenique no jardim de Versailles',
                 priceInReal: 150,
                 priceInEuro: 30,
-                url: 'http://google.com.br'
+                url: 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=181978185-28eae47c-aa77-42c8-8506-fc3308e5b429'
             },
             {
-                icon: '🛒',
+                icon: 'supermercado.png',
                 title: 'Compras da semana no "supermarché"',
                 priceInReal: 250,
                 priceInEuro: 50,
-                url: 'http://google.com.br'
+                url: 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=181978185-3d749e5c-aa78-4b72-b164-50b8794e962e'
             },
             {
-                icon: '🍽',
+                icon: 'jantar.png',
                 title: 'Jantar no topo da Torre Eiffel',
                 priceInReal: 500,
                 priceInEuro: 100,
-                url: 'http://google.com.br'
+                url: 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=181978185-06dd9241-bdda-404a-bc36-87109c8374a4'
             }
-        ]
+        ];
+    }
+
+    componentDidMount() {
+        //https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
+        window.addEventListener('resize', () => {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        });
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize');
     }
 
     openLink(link, target) {
