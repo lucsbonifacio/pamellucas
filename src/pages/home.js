@@ -94,7 +94,6 @@ export default class Home extends Component {
         document.documentElement.style.setProperty('--vh', `${vh}px`);
     }
 
-
     openLink(link, target) {
         window.open(link, target);
     }
@@ -120,7 +119,6 @@ export default class Home extends Component {
                 <section className="picture">
                     <Menu />
                     <Logo />
-                    <Playlist />
                     <button className="button button--details button--primary" type="button" onClick={() => smoothScroll('detalhes')}>
                         <span className="button__label">Detalhes</span>
                         <svg className="chevron-bottom" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -129,23 +127,26 @@ export default class Home extends Component {
                     </button>
                 </section>
                 <section id="detalhes" className="sidebar">
-                    <article id="data" className="information">
-                        <h2>06.10.2019</h2>
-                        <p>Domingo, 15h</p>
-                    </article>
-                    <article id="endereco" className="information">
-                        <h2>Buffet Jabuticá</h2>
-                        <p>Rua Harmonia, 896</p>
-                        <p>Vila Madalena</p>
-                        <p>São Paulo/SP</p>
-                        <button className="button button--default" type="button" onClick={() => this.openLink('https://goo.gl/maps/4E2ShLMS6jcas1Zf8', '_blank')}>Ver no mapa</button>
-                    </article>
-                    <article id="lista-de-presentes" className="information information__gifts">
-                        <h2>Envie um presente</h2>
-                        <p>Por questões de logística, não fizemos uma lista “convencional” de presentes de casamento, já que não será possível levar tudo conosco para outro país. No entanto, criamos essa outra opção para que nossos convidados, caso se sintam à vontade, possam contribuir com algum valor. </p>
-                        <p>A quantia adquirida será usada para terminarmos de mobiliar e decorar nosso apê.</p>
-                        <button className="button button--primary" type="button" onClick={() => this.toggleModal()}>Ver opções</button>
-                    </article>
+                    <Playlist />
+                    <div className="information__container">
+                        <article id="data" className="information">
+                            <h2>06.10.2019</h2>
+                            <p>Domingo, 15h</p>
+                        </article>
+                        <article id="endereco" className="information">
+                            <h2>Buffet Jabuticá</h2>
+                            <p>Rua Harmonia, 896</p>
+                            <p>Vila Madalena</p>
+                            <p>São Paulo/SP</p>
+                            <button className="button button--default" type="button" onClick={() => this.openLink('https://goo.gl/maps/4E2ShLMS6jcas1Zf8', '_blank')}>Ver no mapa</button>
+                        </article>
+                        <article id="lista-de-presentes" className="information information__gifts">
+                            <h2>Envie um presente</h2>
+                            <p>Por questões de logística, não fizemos uma lista “convencional” de presentes de casamento, já que não será possível levar tudo conosco para outro país. No entanto, criamos essa outra opção para que nossos convidados, caso se sintam à vontade, possam contribuir com algum valor. </p>
+                            <p>A quantia adquirida será usada para terminarmos de mobiliar e decorar nosso apê.</p>
+                            <button className="button button--primary" type="button" onClick={() => this.toggleModal()}>Ver opções</button>
+                        </article>
+                    </div>
                 </section>
                 <Modal show={this.state.showModal} onClose={() => this.toggleModal()}>
                     <div className="modal__content">
