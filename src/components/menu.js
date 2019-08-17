@@ -1,20 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { smoothScroll } from '../providers/smoothScroll';
+
 import './menu.css';
 
-const Menu = () => (
-    <nav className="menu">
-        <ul>
-            <li>
-                <a href="#date">Data</a>
-            </li>
-            <li>
-                <a href="#address">Endereço</a>
-            </li>
-            <li>
-                <a href="#gifts">Lista de <br /> presentes</a>
-            </li>
-        </ul>
-    </nav>    
-);
-
-export default Menu;
+export default class Menu extends Component {
+    render() {
+        return (
+            <nav className="menu">
+                <ul>
+                    <li onClick={() => smoothScroll('data')}>Data</li>
+                    <li onClick={() => smoothScroll('endereco')}>Endereço</li>
+                    <li onClick={() => smoothScroll('lista-de-presentes')}>Lista de <br /> presentes</li>
+                </ul>
+            </nav>    
+        );
+    }
+}

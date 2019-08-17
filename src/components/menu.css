@@ -25,7 +25,7 @@
     padding-right: 16px;
 }
 
-
+.menu li,
 .menu li a {
     color: var(--color-light);
     font-weight: 600;

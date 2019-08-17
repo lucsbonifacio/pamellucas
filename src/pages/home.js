@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { smoothScroll } from '../providers/smoothScroll';
+
 import Gift from '../components/gift';
 import Logo from '../components/logo';
 import Menu from '../components/menu';
@@ -89,22 +91,22 @@ export default class Home extends Component {
                 <section className="picture">
                     <Menu />
                     <Logo />
-                    <button className="button button--primary" type="button" onClick={() => this.openLink('#details', '_self')}>Detalhes</button>
+                    <button className="button button--primary" type="button" onClick={() => smoothScroll('detalhes')}>Detalhes</button>
                 </section>
-                <section id="details" className="sidebar">
-                    <article className="information">
-                        <h2 id="date">06.10.2019</h2>
+                <section id="detalhes" className="sidebar">
+                    <article id="data" className="information">
+                        <h2>06.10.2019</h2>
                         <p>Domingo, 15h</p>
                     </article>
-                    <article className="information">
-                        <h2 id="address">Buffet Jabuticá</h2>
+                    <article id="endereco" className="information">
+                        <h2>Buffet Jabuticá</h2>
                         <p>Rua Harmonia, 896</p>
                         <p>Vila Madalena</p>
                         <p>São Paulo/SP</p>
                         <button className="button button--default" type="button" onClick={() => this.openLink('https://goo.gl/maps/4E2ShLMS6jcas1Zf8', '_blank')}>Ver no mapa</button>
                     </article>
-                    <article className="information information__gifts">
-                        <h2 id="gifts">Envie um presente</h2>
+                    <article id="lista-de-presentes" className="information information__gifts">
+                        <h2>Envie um presente</h2>
                         <p>Por questões de logística, não fizemos uma lista “convencional” de presentes de casamento, já que não será possível levar tudo conosco para outro país. No entanto, criamos essa outra opção para que nossos convidados, caso se sintam à vontade, possam contribuir com algum valor. </p>
                         <p>A quantia adquirida será usada para terminarmos de mobiliar e decorar nosso apê.</p>
                         <button className="button button--primary" type="button" onClick={() => this.setState({ showModal: true })}>Ver opções</button>
