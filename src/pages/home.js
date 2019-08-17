@@ -21,7 +21,7 @@ export default class Home extends Component {
         this.gifts = [
             {
                 icon: 'croissant.png',
-                title: 'Croissants na boulangerie da esquina',
+                title: 'Croissants na "boulangerie"',
                 priceInReal: 25,
                 priceInEuro: 5,
                 url: 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=181978185-40565c7d-9e25-49c6-88e5-9b1f7669407f'
@@ -34,18 +34,18 @@ export default class Home extends Component {
                 url: 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=181978185-a02eb801-4f9a-4949-906c-50499d8e3383'
             },
             {
-                icon: 'livros.png',
-                title: 'Material para as aulas de francês',
-                priceInReal: 100,
-                priceInEuro: 20,
-                url: 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=181978185-8aad55c7-5341-43e8-bce3-50c12f5851f3'
-            },
-            {
                 icon: 'piquenique.png',
                 title: 'Piquenique no jardim de Versailles',
+                priceInReal: 100,
+                priceInEuro: 20,
+                url: 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=181978185-28eae47c-aa77-42c8-8506-fc3308e5b429'
+            },            
+            {
+                icon: 'livros.png',
+                title: 'Material para as aulas de francês',
                 priceInReal: 150,
                 priceInEuro: 30,
-                url: 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=181978185-28eae47c-aa77-42c8-8506-fc3308e5b429'
+                url: 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=181978185-8aad55c7-5341-43e8-bce3-50c12f5851f3'
             },
             {
                 icon: 'supermercado.png',
@@ -117,7 +117,6 @@ export default class Home extends Component {
         return (
             <main className="home">
                 <section className="picture">
-                    <Menu />
                     <Logo />
                     <button className="button button--details button--primary" type="button" onClick={() => smoothScroll('detalhes')}>
                         <span className="button__label">Detalhes</span>
@@ -150,7 +149,7 @@ export default class Home extends Component {
                 </section>
                 <Modal show={this.state.showModal} onClose={() => this.toggleModal()}>
                     <div className="modal__content">
-                        <h1>Envie um presente</h1>
+                        <h2>Envie um presente</h2>
                         <p>Os itens são ilustrativos e essas quantias são algumas sugestões. Se quiser contribuir com algum outro valor que não esteja abaixo, entre em contato conosco.</p>
 
                         <div className="gift__list">

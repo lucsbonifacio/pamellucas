@@ -66,9 +66,9 @@
 }
 
 .button--close svg {
-    height: 24px;
+    height: 16px;
     fill: var(--color-dark);
-    width: 24px;
+    width: 16px;
 }
 
 @media (min-width: 1024px) {
@@ -81,9 +81,21 @@
     }
 
     .modal .modal__content {
-        margin-top: 28px;
+        height: calc(100vh - 64px);
+        margin-top: 40px;
         padding-left: 24px;
         padding-right: 24px;        
+    }
+
+    .modal .modal__content h2 {
+        margin-top: 16px;
+    }
+
+    .modal .modal__header {
+        padding-bottom: 24px;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 24px;
     }
 
     .modal.is--hidden {

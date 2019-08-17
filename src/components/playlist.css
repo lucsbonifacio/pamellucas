@@ -66,6 +66,7 @@
     .button--spotify svg.logo {
         fill: var(--color-dark);
         height: 48px;
+        margin-left: 6px;
         width: 48px;
     }
 }
