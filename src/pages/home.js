@@ -99,7 +99,12 @@ export default class Home extends Component {
                 <section className="picture">
                     <Menu />
                     <Logo />
-                    <button className="button button--primary" type="button" onClick={() => smoothScroll('detalhes')}>Detalhes</button>
+                    <button className="button button--details button--primary" type="button" onClick={() => smoothScroll('detalhes')}>
+                        <span class="button__label">Detalhes</span>
+                        <svg class="chevron-bottom" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <path id="path-1" d="M11.6667 18.75 0 30.416664 50 80.416664 100 30.416664 88.3333 18.75 50 57.083364z"></path>
+                        </svg>
+                    </button>
                 </section>
                 <section id="detalhes" className="sidebar">
                     <article id="data" className="information">

@@ -69,6 +69,19 @@
     color: var(--color-dark);
 }
 
+.button--details {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.button--details .chevron-bottom {
+    fill: var(--color-light);
+    height: 12px;
+    margin-left: 8px;
+    width: 12px;
+}
+
 .sidebar {
     background-color: var(--color-primary);
     padding-bottom: 32px;

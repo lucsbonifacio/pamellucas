@@ -5,17 +5,15 @@
     height: 100vh;
     left: 0;
     padding-bottom: 16px;
-    padding-left: 16px;
-    padding-right: 16px;
     padding-top: 16px;
     position: fixed;
     top: 0;
-    transition: transform 600ms ease-in;
+    transition: all 400ms;
     width: 100%;
 }
 
 .modal.is--hidden {
-    transform: translateY(110%);
+    transform: translateY(100%);
 }
 
 .modal--is-visible {
@@ -47,6 +45,8 @@
     height: calc(100vh - 56px);
     margin-top: 45px;
     overflow-y: scroll;
+    padding-left: 16px;
+    padding-right: 16px;    
     -webkit-overflow-scrolling: touch;
 }
 
@@ -75,8 +75,6 @@
     .modal {
         left: auto;
         padding-bottom: 24px;
-        padding-left: 24px;
-        padding-right: 24px;
         padding-top: 24px;
         right: 0;
         width: 30%;
@@ -84,6 +82,8 @@
 
     .modal .modal__content {
         margin-top: 28px;
+        padding-left: 24px;
+        padding-right: 24px;        
     }
 
     .modal.is--hidden {
