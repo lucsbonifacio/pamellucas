@@ -1,3 +1,12 @@
+export const openLink = (link, target) => {
+    window.open(link, target);
+}
+
+export const smoothScroll = (section) => {
+    const element = document.querySelector(`#${section}`);
+    element.scrollIntoView({ behavior: 'smooth' });
+}
+
 export const isMobilePlatform = () => { 
     if( 
         navigator.userAgent.match(/Android/i)

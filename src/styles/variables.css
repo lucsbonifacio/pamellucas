@@ -8,11 +8,3 @@
     --font-family-primary: "Open Sans", "Helvetica Neue", "sans-serif";
     --font-family-secondary: "Otama EP", "serif";
 }
-
-@font-face {
-    font-family: 'Otama EP';
-    src: url('../assets/fonts/otama-ep-webfont.woff2') format('woff2'),
-         url('../assets/fonts/otama-ep-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 
-import { smoothScroll } from '../providers/smoothScroll';
+import { smoothScroll, openLink } from '../providers/utilities';
 
 import Gift from '../components/gift';
 import Logo from '../components/logo';
-import Menu from '../components/menu';
 import Modal from '../components/modal';
 import Playlist from '../components/playlist';
 import './home.css';
@@ -94,10 +93,6 @@ export default class Home extends Component {
         document.documentElement.style.setProperty('--vh', `${vh}px`);
     }
 
-    openLink(link, target) {
-        window.open(link, target);
-    }
-
     renderGifts() {
         return this.gifts.map(gift => {
             const { icon, title, priceInReal, priceInEuro, url } = gift;
@@ -137,7 +132,7 @@ export default class Home extends Component {
                             <p>Rua Harmonia, 896</p>
                             <p>Vila Madalena</p>
                             <p>São Paulo/SP</p>
-                            <button className="button button--default" type="button" onClick={() => this.openLink('https://goo.gl/maps/4E2ShLMS6jcas1Zf8', '_blank')}>Ver no mapa</button>
+                            <button className="button button--default" type="button" onClick={() => openLink('https://goo.gl/maps/4E2ShLMS6jcas1Zf8', '_blank')}>Ver no mapa</button>
                         </article>
                         <article id="lista-de-presentes" className="information information__gifts">
                             <h2>Envie um presente</h2>
