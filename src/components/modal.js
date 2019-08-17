@@ -11,6 +11,23 @@ export default class Modal extends Component {
 
     componentDidMount() {
         this.visible = this.props.show;
+        this.listenContainerScroll();
+    }
+
+    listenContainerScroll() {
+        const container = document.querySelector('.modal__content');
+        const header = document.querySelector('.modal__header');
+
+        container.onscroll = (event) => {
+            let scrollTop = event.target.scrollTop;
+            let headerHeight = header.getBoundingClientRect().height;
+
+            if (scrollTop > headerHeight) {
+                header.classList.add('with--box-shadow');
+            } else {
+                header.classList.remove('with--box-shadow');
+            }
+        }
     }
 
     render() {
