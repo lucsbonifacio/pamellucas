@@ -56,3 +56,22 @@ p {
 p {
   font-size: 16px;
 }
+
+@media (min-width: 1024px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track:hover {
+    background-color: rgba(var(--color-dark-rgb), 0.2); 
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(var(--color-dark-rgb), 0.2); 
+    border-radius: 16px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(var(--color-dark-rgb), 0.4);
+  }  
+}
