@@ -85,6 +85,14 @@ export default class Home extends Component {
         });
     }
 
+    toggleModal() {
+        this.setState({ showModal: !this.state.showModal }, () => {
+            const overflow = this.state.showModal ? 'hidden' : 'auto';
+            const body = document.body;
+            body.style.overflow = overflow;
+        });
+    }
+
     render() {
         return (
             <main className="home">
@@ -109,10 +117,10 @@ export default class Home extends Component {
                         <h2>Envie um presente</h2>
                         <p>Por questões de logística, não fizemos uma lista “convencional” de presentes de casamento, já que não será possível levar tudo conosco para outro país. No entanto, criamos essa outra opção para que nossos convidados, caso se sintam à vontade, possam contribuir com algum valor. </p>
                         <p>A quantia adquirida será usada para terminarmos de mobiliar e decorar nosso apê.</p>
-                        <button className="button button--primary" type="button" onClick={() => this.setState({ showModal: true })}>Ver opções</button>
+                        <button className="button button--primary" type="button" onClick={() => this.toggleModal()}>Ver opções</button>
                     </article>
                 </section>
-                <Modal show={this.state.showModal} onClose={() => this.setState({ showModal: !this.state.showModal })}>
+                <Modal show={this.state.showModal} onClose={() => this.toggleModal()}>
                     <div className="modal__content">
                         <h1>Envie um presente</h1>
                         <p>Os itens são ilustrativos e essas quantias são algumas sugestões. Se quiser contribuir com algum outro valor que não esteja abaixo, entre em contato conosco.</p>

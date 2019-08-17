@@ -36,6 +36,7 @@
     position: absolute;
     transition: box-shadow 304ms;
     width: 100%;
+    z-index: 1;
 }
 
 .modal__header.with--box-shadow {
