@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c31cedb9cb10ecf6b7824cd983abacf8",
+    "revision": "f4a58863ee466ec620fb09242353829c",
     "url": "/pamellucas/index.html"
   },
   {
-    "revision": "ffd4a0a781c494a26df8",
-    "url": "/pamellucas/static/css/main.fb3a1ef6.chunk.css"
+    "revision": "5a1a0ea6f249b88d0a8e",
+    "url": "/pamellucas/static/css/main.e41f7143.chunk.css"
   },
   {
     "revision": "fbc4864dc9379254c6bb",
     "url": "/pamellucas/static/js/2.43704600.chunk.js"
   },
   {
-    "revision": "ffd4a0a781c494a26df8",
-    "url": "/pamellucas/static/js/main.84f2f1c3.chunk.js"
+    "revision": "5a1a0ea6f249b88d0a8e",
+    "url": "/pamellucas/static/js/main.382cad06.chunk.js"
   },
   {
     "revision": "1e403202642001076d78",
@@ -30,6 +30,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "15f230a9d465c7647283d80e5efb08a3",
     "url": "/pamellucas/static/media/livros.15f230a9.png"
+  },
+  {
+    "revision": "2ca58e3cd2480fdd2a0e7e70ac4e5a79",
+    "url": "/pamellucas/static/media/otama-ep-webfont.2ca58e3c.woff2"
+  },
+  {
+    "revision": "31108306c5323d9bdde9162526014b84",
+    "url": "/pamellucas/static/media/otama-ep-webfont.31108306.woff"
   },
   {
     "revision": "d6d847c767fb4184d9b165d56a442d93",
