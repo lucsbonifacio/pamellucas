@@ -14,7 +14,8 @@ export default class Home extends Component {
         super(props);
 
         this.state = {
-            showModal: false
+            showModal: false,
+            windowInnerWidth: 0
         }
 
         this.gifts = [
@@ -64,16 +65,35 @@ export default class Home extends Component {
     }
 
     componentDidMount() {
-        //https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
-        window.addEventListener('resize', () => {
-            let vh = window.innerHeight * 0.01;
-            document.documentElement.style.setProperty('--vh', `${vh}px`);
-        });
-    }
+        if (!this.state.windowInnerWidth) {
+            const windowInnerWidth = window.innerWidth;
+            this.setState({ windowInnerWidth });
+            this.resizePictureBasedOnWindow();
+        }
 
+        this.listenWindowResize();
+    }
+    
     componentWillUnmount() {
         window.removeEventListener('resize');
     }
+    
+    listenWindowResize() {
+        window.addEventListener('resize', () => {
+            const windowInnerWidth = window.innerWidth;
+            if (windowInnerWidth !== this.state.windowInnerWidth) {
+                this.setState({ windowInnerWidth });
+                this.resizePictureBasedOnWindow();
+            }
+        });
+    }
+    
+    resizePictureBasedOnWindow() {
+        //https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+
 
     openLink(link, target) {
         window.open(link, target);
@@ -102,8 +122,8 @@ export default class Home extends Component {
                     <Logo />
                     <Playlist />
                     <button className="button button--details button--primary" type="button" onClick={() => smoothScroll('detalhes')}>
-                        <span class="button__label">Detalhes</span>
-                        <svg class="chevron-bottom" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <span className="button__label">Detalhes</span>
+                        <svg className="chevron-bottom" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                             <path id="path-1" d="M11.6667 18.75 0 30.416664 50 80.416664 100 30.416664 88.3333 18.75 50 57.083364z"></path>
                         </svg>
                     </button>
