@@ -6,6 +6,7 @@ import Gift from '../components/gift';
 import Logo from '../components/logo';
 import Menu from '../components/menu';
 import Modal from '../components/modal';
+import Playlist from '../components/playlist';
 import './home.css';
 
 export default class Home extends Component {
@@ -99,6 +100,7 @@ export default class Home extends Component {
                 <section className="picture">
                     <Menu />
                     <Logo />
+                    <Playlist />
                     <button className="button button--details button--primary" type="button" onClick={() => smoothScroll('detalhes')}>
                         <span class="button__label">Detalhes</span>
                         <svg class="chevron-bottom" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">

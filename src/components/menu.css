@@ -21,8 +21,8 @@
 }
 
 .menu li {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 .menu li,
@@ -31,4 +31,11 @@
     font-weight: 600;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+@media (min-width: 375px) {
+    .menu li {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
 }
