@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { withRouter } from 'react-router-dom';
 import { smoothScroll, openLink } from '../providers/utilities';
 
 import Gift from '../components/gift';
@@ -8,7 +8,7 @@ import Modal from '../components/modal';
 import Playlist from '../components/playlist';
 import './home.css';
 
-export default class Home extends Component {
+class Home extends Component {
     constructor(props) {
         super(props);
 
@@ -71,10 +71,17 @@ export default class Home extends Component {
         }
 
         this.listenWindowResize();
+        this.matchRedirection();
     }
     
-    componentWillUnmount() {
-        window.removeEventListener('resize');
+    matchRedirection() {
+        const urlHasRedirectParam = window.location.search.includes('redirect');
+        const { history } = this.props;
+
+        if (urlHasRedirectParam) {
+            const routeToRedirect = window.location.search.replace('?redirect=', '');
+            history.push(routeToRedirect);
+        }
     }
     
     listenWindowResize() {
@@ -156,3 +163,5 @@ export default class Home extends Component {
         )
     }
 }
+
+export default withRouter(Home);

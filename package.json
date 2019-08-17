@@ -1,7 +1,7 @@
 {
   "name": "pamellucas",
   "version": "0.1.0",
-  "homepage": "https://lucsbonifacio.github.io/pamellucas",
+  "homepage": "https://pamellucas.com",
   "private": true,
   "dependencies": {
     "react": "^16.9.0",
