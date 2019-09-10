@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8ceb59ba.chunk.css",
+    "main.js": "/static/js/main.12a0cd97.chunk.js",
+    "main.js.map": "/static/js/main.12a0cd97.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.2df2340e.js",
+    "runtime~main.js.map": "/static/js/runtime~main.2df2340e.js.map",
+    "static/js/2.f9df16ae.chunk.js": "/static/js/2.f9df16ae.chunk.js",
+    "static/js/2.f9df16ae.chunk.js.map": "/static/js/2.f9df16ae.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.1910f52968e0fb6823c38f132103e436.js": "/precache-manifest.1910f52968e0fb6823c38f132103e436.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.8ceb59ba.chunk.css.map": "/static/css/main.8ceb59ba.chunk.css.map",
+    "static/media/croissant.png": "/static/media/croissant.5ee1cb9f.png",
+    "static/media/jantar.png": "/static/media/jantar.ae7aa564.png",
+    "static/media/livros.png": "/static/media/livros.15f230a9.png",
+    "static/media/index.css": "/static/media/otama-ep-webfont.31108306.woff",
+    "static/media/patinete.png": "/static/media/patinete.d6d847c7.png",
+    "static/media/piquenique.png": "/static/media/piquenique.926f4ec1.png",
+    "static/media/supermercado.png": "/static/media/supermercado.510b83fd.png"
+  }
+}
